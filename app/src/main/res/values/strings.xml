@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoinGekko_RecyclerView</string>
+    <string name="coin_name">Name: %s</string>
+    <string name="coin_price">Price: %s</string>
+    <string name="symbol_name">Symbol: %s</string>
+    <string name="cap_rank">Rank: %s</string>
+</resources>
