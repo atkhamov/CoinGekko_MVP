@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 
 public interface GekkoApi {
 
-    @GET(Constants.PATH_TO_DATA + "markets")
+    @GET(Constants.PATH_TO_DATA + "coins/markets")
     Call<List<Coin>> getCoin(
             @Query("vs_currency") String symbol,
             @Query("per_page") int per_page

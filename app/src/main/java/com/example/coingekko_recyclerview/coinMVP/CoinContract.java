@@ -6,18 +6,27 @@ import java.util.List;
 
 public interface CoinContract {
     interface View{
-        void showLanding();
-        void hideLanding();
+
+        /**
+         * Due to the fact that We don't want to use Fragments for showing the COINS
+         * we have only one VIEW left, which is MainActivity.
+         * In this case, we do NOT need to have View class in contMVP package.
+         * Furthermore, we should implement methods of CoinContract.View interface
+         * in the MainActivity class*/
+
+        void showLoading();
+        void hideLoading();
         void addNewCoins(List<Coin> newCoins);
         void showError(Throwable throwable);
     }
 
     interface Presenter{
-        void load(int page);
+        void load();
+        void loadingFinished(List<Coin> coinsList);
         void loadingFailed(Throwable throwable);
     }
 
     interface Model{
-        void getDealList(int page);
+        void getCoinList(String currency, int per_page);
     }
 }
